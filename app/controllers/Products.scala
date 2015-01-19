@@ -17,7 +17,7 @@ object Products extends Controller with securesocial.core.SecureSocial {
   )
   
   
-  def list = Action { implicit request =>
+  def list = SecuredAction { implicit request =>
     val products = Product.findAll  
     Ok(views.html.products.list(products))
   }
