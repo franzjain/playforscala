@@ -6,7 +6,7 @@ import play.api.data.Form
 import play.api.data.Forms.{ mapping, longNumber, nonEmptyText }
 import play.api.i18n.Messages
 
-object Products extends Controller{
+object Products extends Controller with securesocial.core.SecureSocial {
 
   private val productForm: Form[Product] = Form(
     mapping(
