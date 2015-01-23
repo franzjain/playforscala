@@ -1,0 +1,12 @@
+@(tweets: Seq[Tweet])(implicit flash: Flash, lang: Lang)
+
+@main("Tweets!") {
+  <h1>Tweets:</h1>	
+  @tweets.map{ tweet =>
+  	<ul>
+  	  <li><span>@tweet.from</span>: @tweet.text</li>
+  	</ul>
+  	
+  }	
+}	
+
